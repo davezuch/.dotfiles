@@ -36,3 +36,10 @@ git pull
 cd ~/.dotfiles/prezto
 git submodule update --init --recursive
 sudo zsh ~/.dotfiles/setup_prezto.zsh
+
+# install nix
+sh <(curl https://nixos.org/nix/install) --no-daemon
+sudo chown $USER /nix
+
+# iterm integration
+bash <(curl https://iterm2.com/misc/install_shell_integration.sh)
