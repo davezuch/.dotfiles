@@ -29,12 +29,21 @@ nvm install node
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# install youcompleteme
+sudo apt install -y build-essential cmake python3-dev
+( cd ~/.config/nvim
+  nvim +PlugUpdate +qa
+  cd ~/.local/share/nvim/plugged/YouCompleteMe
+  python3 install.py
+)
+
 # setup prezto configs
 sudo apt install zsh
 chsh -s $(which zsh)
 git pull
-cd ~/.dotfiles/prezto
-git submodule update --init --recursive
+( cd ~/.dotfiles/prezto
+  git submodule update --init --recursive
+)
 sudo zsh ~/.dotfiles/setup_prezto.zsh
 
 # install nix

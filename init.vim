@@ -19,7 +19,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 " Plugins initialization start
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
